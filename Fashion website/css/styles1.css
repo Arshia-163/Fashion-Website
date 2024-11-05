@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+}
+
+.filter-sidebar h3, .filter-sidebar h4 {
+    margin-bottom: 10px;
+}
+
+.filter-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-section li {
+    margin-bottom: 10px;
+}
+
+.filter-section input {
+    margin-right: 10px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.sort-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.sort-section label{
+    margin-left: 85%;
+}
+
+.active-filters {
+    margin-bottom: 20px;
+}
+
+.active-filters div {
+    display: inline-block;
+    background-color: #f1c40f;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 75%;
+    margin-left: 150px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: relative;
+    transition: box-shadow 0.3s;
+    width: auto;
+    gap: 50px;
+}
+
+.product-card:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    position: relative;
+
+}
+
+.product-image img {
+    width:100%;
+    display: block;
+}
+
+.product-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.product-details {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.price {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-left: 5px;
+}
+
+.hover-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-card:hover .hover-icons {
+    opacity: 1;
+}
+
+.hover-icons button {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); 
+      width: 85%; 
+      margin-left: 80px; 
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); 
+      width: 90%;
+      margin-left: 40px;
+    }
+  
+    .product-card {
+      gap: 20px; /* Adjust gap between product cards */
+    }
+  
+    .product-image img {
+      height: auto; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: 1fr; 
+      width: 100%; 
+      margin-left: 0;
+    }
+  
+    .product-card {
+      gap: 20px;
+    }
+  
+    .product-image img {
+      height: auto; 
+      object-fit: cover; 
+    }
+  
+    .hover-icons {
+      gap: 5px; /* Reduce gap for hover icons on smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product-grid {
+      grid-template-columns: 1fr; 
+      width: 100%;
+    }
+  
+    .product-card {
+      padding: 8px; 
+    }
+  
+    .product-image img {
+      width: 100%; /* Ensure image takes full width */
+      height: auto;
+    }
+  
+    .price {
+      font-size: 14px; /* Reduce text size */
+    }
+  
+    .original-price {
+      font-size: 10px; 
+    }
+  
+    .hover-icons button {
+      padding: 4px; /* Adjust button size for small screens */
+    }
+  }
+ 
+
+.connect-wallet {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: auto; 
+    height: 140px;
+    width: 200px;
+
+}
+
+.connect-wallet:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.connect-wallet:active {
+    transform: scale(0.95);
+}
