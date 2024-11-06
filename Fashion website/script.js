@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', async () => {
     const categoryFilters = document.querySelectorAll('.category-filter');
     const colorFilters = document.querySelectorAll('.color-filter');
@@ -161,9 +159,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyFilters();
     displayActiveFilters();
 });
-
-const connectWalletButton = document.createElement('button');
-connectWalletButton.textContent = "Connect Wallet";
-connectWalletButton.classList.add('connect-wallet');
-connectWalletButton.addEventListener('click', connectWeb3);
-document.body.insertBefore(connectWalletButton, productGrid);
